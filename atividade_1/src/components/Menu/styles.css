@@ -1,0 +1,10 @@
+ul {
+  display: "flex"
+}
+
+li {
+  list-style-type: "none";
+  background-color: aliceblue;
+  padding: 3px;
+  margin: 2px
+}
