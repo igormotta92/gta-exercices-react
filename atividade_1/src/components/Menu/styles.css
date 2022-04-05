@@ -1,10 +1,25 @@
+nav {
+  background-color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 16px;
+}
+
 ul {
-  display: "flex"
+  display: flex;
+  justify-content: center;
 }
 
 li {
-  list-style-type: "none";
+  list-style: none;
   background-color: aliceblue;
-  padding: 3px;
-  margin: 2px
+  margin: 16px
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: #d7ecff;
 }

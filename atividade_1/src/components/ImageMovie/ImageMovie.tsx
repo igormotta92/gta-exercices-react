@@ -1,32 +1,24 @@
 interface IImage {
-  id: number
+  id: number;
+  title: string;
   src: string
   alt: string
 }
-
 interface IProps {
   images: IImage[]
 }
 
-const ImageMovie: React.FC<IProps> = ({ images }) => {
-
+function ImageMovie({ images }: IProps) {
   return (
-    <>
-      {images.length > 0 ? images.map(item => {
-        <img key={item.id} src={item.src} alt={item.alt} />
-      }) : 'teste'}
-    </>
+    <figure>
+      {images.map(item => (
+        <>
+          <h2>{item.title}</h2>
+          <img className="img" key={item.id} src={item.src} alt={item.alt} />
+        </>
+      ))}
+    </figure>
   )
 }
 
-// function ImageMovie2({ images }: IProps) {
-//   return (
-//     <>
-//       {images.map(item => {
-//         <img key={item.id} src={item.src} alt={item.alt} />
-//       })}
-//     </>
-//   )
-// }
-
-export default ImageMovie
+export default ImageMovie;
