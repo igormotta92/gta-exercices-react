@@ -1,4 +1,4 @@
-import { ImageMovie } from "../../components/ImageMovie";
+import { CardMovie } from "../../components/CardMovie";
 
 const moviesImages = [
   {
@@ -19,7 +19,7 @@ function Movies() {
   return (
     <>
       <h1>Movies</h1>
-      <ImageMovie images={moviesImages} />
+      <CardMovie movieData={moviesImages} />
     </>
   )
 }

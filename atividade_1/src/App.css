@@ -41,8 +41,14 @@ figure {
   padding: 16px;
 }
 
-.img {
-  width: 350px;
-  height: 250px;
-  margin: 16px
+.card {
+  height: 350px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid gainsboro;
+  margin: 16px;
+}
+
+.card img {
+  height: 80%;
 }
