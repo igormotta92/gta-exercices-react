@@ -8,7 +8,13 @@ const plans = [
 const Home: React.FC<{}> = () => {
   const tsxList: any[] = [];
   plans.forEach(item => {
-    tsxList.push(<li key={item.id}> {item.pacote} - {item.price}</li>)
+    tsxList.push(
+      // <li key={item.id}> {item.pacote} - {item.price}</li>
+      <tr key={item.id}>
+        <td>{item.pacote}</td>
+        <td>{item.price}</td>
+      </tr>
+    )
   });
 
   return (
@@ -16,9 +22,18 @@ const Home: React.FC<{}> = () => {
       <header>
         <h1>Group 3</h1>
       </header>
-      <ul>
+      <table>
+        <thead>
+          <th>Pacote</th>
+          <th>Preço</th>
+        </thead>
+        <tbody>
+          {tsxList}
+        </tbody>
+      </table>
+      {/* <ul>
         {tsxList}
-      </ul>
+      </ul> */}
     </>
   )
 }

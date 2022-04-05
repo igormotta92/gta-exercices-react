@@ -4,7 +4,7 @@ import "./styles.css";
 const Menu: React.FC<{}> = (props) => {
   return (
     <>
-      <nav>
+      <nav className="c-menu">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/movies">Movies</Link></li>
