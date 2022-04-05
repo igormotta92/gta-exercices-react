@@ -1,0 +1,11 @@
+.c-card {
+  height: 350px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid gainsboro;
+  margin: 16px;
+}
+
+.c-card img {
+  height: 80%;
+}

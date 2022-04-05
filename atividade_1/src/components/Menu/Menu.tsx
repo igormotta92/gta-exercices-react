@@ -1,7 +1,12 @@
+import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
-const Menu: React.FC<{}> = (props) => {
+interface IProps {
+  children: ReactNode;
+}
+
+function Menu({ children }: IProps) {
   return (
     <>
       <nav className="c-menu">
@@ -12,7 +17,9 @@ const Menu: React.FC<{}> = (props) => {
           <li><Link to="/contacts">Contacts</Link></li>
         </ul>
       </nav>
-      {props.children}
+      <section>
+        {children}
+      </section>
     </>
   )
 }
