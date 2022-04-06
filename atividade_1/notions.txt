@@ -18,3 +18,17 @@
 -- #
 npm install react-icons --save
 https://react-icons.github.io/react-icons/
+
+
+### Docker ###
+- https://docs.docker.com/engine/reference/commandline/system_prune/
+
+Criar imagem:
+$ docker build -t react-navigation . 
+
+Inicializar imagem
+$ docker run --name react -i -t -d -p 3000:3000 react-navigation 
+
+Parar e remover imagem
+$ docker stop react
+$ docker rm react
