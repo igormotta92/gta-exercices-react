@@ -9,7 +9,7 @@ interface IProps {
 function Menu({ children }: IProps) {
   return (
     <>
-      <nav>
+      <nav className="nav">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/movies">Movies</Link></li>

@@ -1,54 +1,122 @@
-.App {
+.card {
+  height: 250px;
+  width: 200px;
   text-align: center;
+  margin: 16px;
+  color: #fff;
+  background-color: #2c2f32;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+} 
+
+.card__img {
+  height: 80%;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card__title {
+  font-weight: bold;
+  margin-top: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.media__container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loading__container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.plans__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plans__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 600px;
+  background-color: #2c2f32;
 }
 
-figure {
-  padding: 16px;
+.plans__item:hover {
+  border: 1px solid #fff;
+} 
+
+.plans__item h2 {
+  margin-top: 32px;
+  text-transform: uppercase;
+  color: #fff
 }
 
-.card {
-  height: 350px;
-  width: 300px;
+.plans__btn {
+  width: 50%;
+  height: 40px;
+  margin: 32px;
+  border: none;
+  background-color: #16537E;
+  color: #fff
+  ;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.plans__btn:hover {
+  background-color: #134a71
+  ;
+}
+
+.plans__price {
+  font-weight: bold;
   text-align: center;
-  border: 1px solid gainsboro;
-  margin: 16px;
+  color: #fff
 }
 
-.card img {
-  height: 80%;
+.plans__price p {
+  font-size: 20px;
+}
+
+.contact__card {
+  width: 200px;
+  height: 150px;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.contact__card--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.contact__card svg {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.contact__card--container:hover {
+  cursor: pointer;
 }

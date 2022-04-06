@@ -1,15 +1,30 @@
-import { BsFacebook, BsInstagram } from 'react-icons/bs';
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail, AiFillFacebook, AiFillInstagram } from "react-icons/ai";
+import { ContactCard } from "../../components/ContactCard";
 
+const contacts = [
+  {
+    Icon: AiOutlineMail,
+    text: "teste@teste.com"
+  },
+  {
+    Icon: AiFillFacebook,
+    text: "Visite nossa página"
+  },
+  {
+    Icon: AiFillInstagram,
+    text: "Nos siga @grupo3"
+  },
+]
 
 function Contacts() {
   return (
-    <div>
-      <h1>Contacts</h1>
+    <div className='contact__container'>
       <h2>Entre em contato!</h2>
-      <h3> Nos mande uma mensagem <AiOutlineMail /> teste@teste.com </h3>
-      <h3> Visite nossa página <BsFacebook /> Grupo 3 </h3>
-      <h3> Nos siga <BsInstagram />@grupo3 </h3>
+      <div className="contact__card--container">
+        {contacts.map((item, i) => (
+          <ContactCard key={i} Icon={item.Icon} text={item.text} />
+        ))}
+      </div>
     </div>
   )
 }

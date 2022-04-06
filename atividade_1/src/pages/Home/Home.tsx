@@ -1,3 +1,4 @@
+import { formatCurrency } from "../../utils/formatCurrency";
 
 const plans = [
   { id: 1, pacote: 'simple', price: 10 },
@@ -5,21 +6,20 @@ const plans = [
   { id: 3, pacote: 'combo', price: 20 },
 ]
 
-const Home: React.FC<{}> = () => {
-  const tsxList: any[] = [];
-  plans.forEach(item => {
-    tsxList.push(<li key={item.id}> {item.pacote} - {item.price}</li>)
-  });
-
+function Home() {
   return (
-    <>
-      <header>
-        <h1>Group 3</h1>
-      </header>
-      <ul>
-        {tsxList}
-      </ul>
-    </>
+    <ul className="plans__container">
+      {plans.map(item => (
+        <li className="plans__item" key={item.id}>
+          <h2>{item.pacote}</h2>
+          <div className="plans__price">
+            <p>{formatCurrency(item.price)}</p>
+            <small>Per Month</small>
+          </div>
+          <button className="plans__btn">Select Plan</button>
+        </li>
+      ))}
+    </ul>
   )
 }
 

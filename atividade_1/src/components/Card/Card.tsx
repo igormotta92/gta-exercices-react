@@ -1,0 +1,20 @@
+import { IMediaData } from "../ListMedia/ListMedia";
+
+interface IProps {
+  media: IMediaData
+}
+
+const imgUrl = 'https://image.tmdb.org/t/p/original/'
+
+function Card({ media }: IProps) {
+  const { id, title, name, poster_path } = media;
+
+  return (
+    <div className="card">
+      <img className="card__img" key={id} src={`${imgUrl}${poster_path}`} alt={name || title} />
+      <h4 className="card__title" >{name || title}</h4>
+    </div>
+  )
+}
+
+export default Card;
