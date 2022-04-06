@@ -28,6 +28,10 @@ Depois disso acesse a pasta que você clonou e instale as dependências executan
   $ yarn # ou npm install
 ```
 
+## .env
+
+Na pasta atividade_1 configure o .env seguindo o arquivo .env.example
+
 ## Executando a aplicação
 
 Abra o seu editor de textos e execute o comando:
