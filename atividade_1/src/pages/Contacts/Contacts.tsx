@@ -18,14 +18,14 @@ const contacts = [
 
 function Contacts() {
   return (
-    <div className='contact__container'>
+    <section className='contact__container'>
       <h2>Entre em contato!</h2>
-      <div className="contact__card--container">
+      <ul className="contact__card--container">
         {contacts.map((item, i) => (
           <ContactCard key={i} Icon={item.Icon} text={item.text} />
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   )
 }
 

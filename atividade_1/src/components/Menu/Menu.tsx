@@ -1,29 +1,32 @@
-import { ReactNode } from "react";
-import { Link, NavLink } from "react-router-dom";
-import "./styles.css";
+import { NavLink } from "react-router-dom";
+import { IMenuProps } from "../../common/types";
 
-interface IProps {
-  children: ReactNode;
-}
+const active = ({ isActive }: any) => (isActive ? {backgroundColor: '#383c40'} : {})
+const navigation = [
+  { path: '/', text: 'Home' },
+  { path: '/movies', text: 'Movies' },
+  { path: '/series', text: 'Series' },
+  { path: '/contacts', text: 'Contacts' }
+] 
 
-function Menu({ children }: IProps) {
-
-  const active = ({ isActive }: any) => (isActive ? {backgroundColor: '#383c40'} : {backgroundColor: ''})
-
+function Menu({ children }: IMenuProps) {
   return (
-    <>
-      <nav className="nav">
-        <ul>
-          <li><NavLink to="/" style={active}>Home</NavLink></li>
-          <li><NavLink to="/movies" style={active}>Movies</NavLink></li>
-          <li><NavLink to="/series" style={active}>Series</NavLink></li>
-          <li><NavLink to="/contacts" style={active}>Contacts</NavLink></li>
-        </ul>
-      </nav>
-      <section>
+    <div className="container">
+      <header className="nav__header">
+        <nav>
+          <ul>
+            {navigation.map(({path, text}) => (
+              <li key={path}>
+                <NavLink to={path} style={active}>{text}</NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+      <main>
         {children}
-      </section>
-    </>
+      </main>
+    </div>
   )
 }
 

@@ -1,14 +1,11 @@
-interface IProps {
-  Icon: React.FC;
-  text: string;
-}
+import { IContactCardProps } from "../../common/types";
 
-function ContactCard({ Icon, text }: IProps) {
+function ContactCard({ Icon, text }: IContactCardProps) {
   return (
-    <div className='contact__card'>
+    <li className='contact__card'>
       <Icon /> 
       <p>{text}</p>
-    </div>
+    </li>
   )
 }
 
