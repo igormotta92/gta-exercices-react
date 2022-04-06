@@ -18,7 +18,7 @@ Uma pequena aplicação para listar alguns filmes.
 Você precisará ter apenas o [NodeJS](https://nodejs.org) instalado na sua máquina, e após isso, clonar este repositório:
 
 ```sh
-  $ git clone https://github.com/devCarlosL/github-profile.git
+  $ git clone https://github.com/igormotta92/gta-exercices-react.git
 ```
 
 Depois disso acesse a pasta que você clonou e instale as dependências executando o seguinte comando:
