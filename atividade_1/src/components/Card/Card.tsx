@@ -11,7 +11,7 @@ function Card({ media }: IProps) {
 
   return (
     <div className="card">
-      <img className="card__img" key={id} src={`${imgUrl}${poster_path}`} alt={name || title} />
+      <img className="card__img" key={id} src={`${imgUrl}${poster_path}`} alt={name || title} loading="lazy" />
       <h4 className="card__title" >{name || title}</h4>
     </div>
   )
