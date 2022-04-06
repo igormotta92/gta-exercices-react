@@ -31,6 +31,7 @@ Depois disso acesse a pasta que você clonou e instale as dependências executan
 ## .env
 
 Na pasta atividade_1 configure o .env seguindo o arquivo .env.example
+Por fins acadêmicos as chaves estão expostas
 
 ## Executando a aplicação
 
