@@ -40,3 +40,12 @@ Abra o seu editor de textos e execute o comando:
 ```sh
   $ yarn start # ou npm run start
 ```
+
+# Getting Started with Docker
+
+Build image
+### `cd atividade_1`
+### `docker build -t react-navigation .`
+
+Initialize the container
+### `docker run --name react -i -t -d -p 3000:3000 react-navigation` 
